@@ -25,11 +25,11 @@ contract Voting {
         require(candidateIndex < candidates.length, "Invalid candidate index");
         require(!voters[msg.sender], "You have already voted");
         
-        // Update the vote count for the candidate
+        
         string memory candidateName = candidates[candidateIndex];
         votesReceived[candidateName]++;
         
-        // Mark the voter as voted
+      
         voters[msg.sender] = true;
     }
 
